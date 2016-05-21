@@ -1,5 +1,5 @@
 # Gerenciador De Eventos
-Pequena aplicação escrita em Node.js para exercitar noções de desenvolvimento: 
+Pequena aplicação escrita em Node.js para exercitar noções de desenvolvimento. 
 
 ## Funções: 
  - cadastrar evento; 
@@ -14,24 +14,32 @@ Pequena aplicação escrita em Node.js para exercitar noções de desenvolviment
   - cadastrar evento.
 
 ## Modelos: 
-   ###Usuário; 
-   ###Evento;
+   - Usuário; 
+   - Evento.
 
- ###Usuario: 
-	- nome: {type: String, required: true}
-	- password: {type: String, required: true}
-	- data_cadastro: {type: Date, default: Date.now}
-	- meus_convites: [ {type: ObjectId, required: true, ref: 'Evento'}]
+ ### Usuario: 
+ ```javascript 
+  Usuario: {
+    nome: {type: String, required: true},
+	password: {type: String, required: true},
+	data_cadastro: {type: Date, default: Date.now},
+	meus_convites: [ {type: ObjectId, required: true, ref: 'Evento'}]
+  }
+ ```
+### Evento:
 
-
-###Evento:
-	- nome: {type: String, required: true}
-	- descrição: {type: String, required: true}
-	- localidade:{
-	     uf:{ type: ENUM}
+  ```javascript
+ Evento:{
+    nome: {type: String, required: true}
+	descrição: {type: String, required: true}
+	localidade:{
+	     uf:{ type: ENUM},
 	     endereço: {type: String, required: true}
-	}
-	- capacidade_max: {type: Number, required: true}
-	- inscr_periodo: {type: Date, required: true}
-	- capacidade_min:  {type: Number, required: true}
-	- usuario_criador: {type: ObjectId, required: true, ref: 'Usuario'}
+	},
+	capacidade_max: {type: Number, required: true},
+	inscr_periodo: {type: Date, required: true},
+	capacidade_min:  {type: Number, required: true},
+	usuario_criador: {type: ObjectId, required: true, ref: 'Usuario'}
+  }
+  ```
+
