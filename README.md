@@ -1,30 +1,30 @@
 # Gerenciador De Eventos
 Pequena aplicação escrita em Node.js para exercitar noções de desenvolvimento: 
 
-# Funções: 
- *cadastrar evento; 
- *alterar evento; 
- *listar eventos; 
- *excluir evento; 
- *participar de um evento.
+## Funções: 
+ - cadastrar evento; 
+ - alterar evento; 
+ - listar eventos; 
+ - excluir evento; 
+ - participar de um evento.
 
-# Telas: 
-  *login; 
-  *dashboard (lista os eventos existentes); 
-  *cadastrar evento.
+## Telas: 
+  - login; 
+  - dashboard (lista os eventos existentes); 
+  - cadastrar evento.
 
-Modelos: 
-       * usuário; 
-       * evento;
+## Modelos: 
+       - usuário; 
+       - evento;
 
-usuario:{  
+- usuario:{  
 	nome: {type: String, required: true}
 	password: {type: String, required: true}
 	data_cadastro: {type: Date, default: Date.now}
 	meus_convites: [ {type: ObjectId, required: true, ref: 'Evento'}]
 }
 
-evento:{
+- evento:{
 	nome: {type: String, required: true}
 	descrição: {type: String, required: true}
 	localidade:{
