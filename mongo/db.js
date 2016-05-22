@@ -1,7 +1,7 @@
 var mongoose = require("mongoose"); 
 
 module.exports = function(){
-	mongoose.connect('mongodb://localhost/temp'); 
+	mongoose.connect('mongodb://localhost/gerenciador'); 
 
 	var db = mongoose.connection; 
 	db.on('error', console.error.bind(console,'connection error: ')); 

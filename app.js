@@ -17,7 +17,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs'); 
 
 //A maneira mais bonita de carregas coisas no express. 
-load('config'). 
+load('config').
 then('models'). 
 then('controllers'). 
 then('routes'). 

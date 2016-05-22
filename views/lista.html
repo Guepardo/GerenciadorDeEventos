@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Listagem de itens</title>
+		<meta charset="utf-8" >
+	</head>
+
+	<p>O status foi <i> <%= (status) ? "Tudo ocurreu bem" : "Tudo ocorreu mal." %></i> </p>
+
+	<table style="width:100%">
+		<tr>
+			<td>Nome</td>
+			<td>Descrição</td>
+		</tr>
+
+		<tr>
+			<% for( var a = 0; a < collection.length; a++) {%>
+				<tr>
+					<td><%= collection[a].nome %></td>
+					<td><%= collection[a].descricao %></td>
+				</tr>
+			<%}%>
+		</tr>
+	</table>
+</table>
+</body>
+</html>
