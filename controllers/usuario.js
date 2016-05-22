@@ -41,6 +41,20 @@ module.exports = (app)=>{
 
 		deletar: function(req, res, next){
 			res.json({'status': true, 'msg': 'everything is good deletar'}); 
+		}, 
+
+		alterarSessao: function(req, res, next ){
+			var mudar 	= req.query.mudar; 
+			var session = req.session; 
+
+			session.mudar = mudar; 
+
+			res.json({status: true}); 
+		}, 
+
+
+		visualizarSessao: function(req, res, next ){
+			res.json({msg: "dados da minha sessão é: "+ req.session.mudar}); 
 		}
 	}; 
 	return controller; 

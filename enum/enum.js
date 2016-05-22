@@ -5,4 +5,3 @@ var ENUM = {
 }; 
 
 module.exports = ENUM;
-
