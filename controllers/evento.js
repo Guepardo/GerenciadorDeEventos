@@ -1,3 +1,5 @@
+var enumEstados = require('../enum/enum'); 
+
 module.exports = (app) =>{
 
 	var Evento = app.models.evento; 
@@ -50,7 +52,7 @@ module.exports = (app) =>{
 		listar: function(req, res, next ){
 			Evento.find({}).
 			limit(200). 
-			select('nome descricao'). 
+			select('nome descricao localidade'). 
 			exec((error, collection) =>{
 				if(error){
 					res.json({status: false, msg: error.errmsg}); 
@@ -59,10 +61,12 @@ module.exports = (app) =>{
 
 				var result = {
 					status: true, 
-					collection: collection
+					collection: collection, 
+					enumEstados: enumEstados
 				}; 
 	
 				res.render('lista.html',result); 
+				// res.json(result); 
 			}); 
 		} 
 	}; 

@@ -4,4 +4,5 @@ var ENUM = {
 	"3": { label: "Pará" },
 }; 
 
-module.enum = ENUM; 
+module.exports = ENUM;
+
