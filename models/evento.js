@@ -1,3 +1,4 @@
+
 var mongoose = require('mongoose'); 
 
 module.exports = (app) =>{
@@ -11,6 +12,7 @@ module.exports = (app) =>{
  	capacidade_max: {type: Number, required: true}, 
  	capacidade_min: {type: Number, required: true}, 
  	inscr_periodo : {type: Date, required: true}, 
+ 	data_criacao  : {type: Date, default: new Date()}
  	//usuario_criador: 
  }); 
 
