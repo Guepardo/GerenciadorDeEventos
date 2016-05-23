@@ -55,7 +55,32 @@ module.exports = (app)=>{
 
 		visualizarSessao: function(req, res, next ){
 			res.json({msg: "dados da minha sessão é: "+ req.session.mudar}); 
+		}, 
+
+		//Método provisório para carregar a sessão com uma ObjectId
+		loadSession: function(req, res, next){
+			var session = req.session; 
+
+			Usuario.find({}).
+			select("_id"). 
+			limit(1). 
+			exec((error, usuario) => {
+				if(error){
+					res.json({'status': false, 'msg': 'Error 1 '});  
+					return;
+				}
+
+
+				if(usuario.length  == 0 ){
+					res.json({'status': false, 'msg': 'Error 2'}); 
+					return;
+				}
+
+				session._id = usuario[0]._id; 
+				res.json({'status': true, 'msg': session._id}); 
+			}); 
 		}
 	}; 
+
 	return controller; 
 }; 
