@@ -1,5 +1,5 @@
 module.exports = (app) => {
-	app.post('/participar', app.controllers.convite.participar); 
-	app.post('/cancelar'  , app.controllers.convite.cancelar); 
-	app.post('/listar'    , app.controllers.convite.listar); 
+	app.post('/c/participar', app.controllers.convite.participar); 
+	app.post('/c/cancelar'  , app.controllers.convite.cancelar); 
+	app.get('/c/listar'    , app.controllers.convite.listar); 
 }; 

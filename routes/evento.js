@@ -1,6 +1,6 @@
 module.exports = (app) =>{
-	app.post('/cadastrar', app.controllers.evento.cadastrar);
-	app.get('/alterar', app.controllers.evento.alterar); 
-	app.get('/excluir', app.controllers.evento.excluir);
-	app.get('/listar', app.controllers.evento.listar);
+	app.post('/e/cadastrar', app.controllers.evento.cadastrar);
+	app.get('/e/alterar', app.controllers.evento.alterar); 
+	app.get('/e/excluir', app.controllers.evento.excluir);
+	app.get('/e/listar', app.controllers.evento.listar);
 }; 
