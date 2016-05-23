@@ -15,8 +15,8 @@ Pequena aplicação escrita em Node.js para exercitar noções de desenvolviment
 
 ## Modelos: 
    - Usuário; 
-   - Convite. 
-   - Evento; 
+   - Convite; 
+   - Evento. 
 
  ### Usuario: 
  ```javascript 
@@ -28,7 +28,6 @@ Pequena aplicação escrita em Node.js para exercitar noções de desenvolviment
  ```
 
  ### Convite:
-
   ```javascript
  Convite:{
     evento: {type: ObjectId, required: true, ref: "Evento"}, 
@@ -38,7 +37,6 @@ Pequena aplicação escrita em Node.js para exercitar noções de desenvolviment
   ```
 
 ### Evento:
-
   ```javascript
  Evento:{
     nome: {type: String, required: true}
